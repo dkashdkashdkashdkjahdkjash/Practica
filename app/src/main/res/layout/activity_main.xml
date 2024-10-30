@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/TextViewTitulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="32dp"
+                android:text="@string/textViewTituloString"
+                android:textSize="24sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageViewFotoPerfil"
+                android:layout_width="128dp"
+                android:layout_height="114dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="32dp"
+                app:layout_constraintBottom_toBottomOf="@+id/TextViewTitulo"
+                app:layout_constraintStart_toEndOf="@+id/TextViewTitulo"
+                app:layout_constraintTop_toTopOf="@+id/TextViewTitulo"
+                tools:srcCompat="@mipmap/foto_de_perfil" />
+
+            <TextView
+                android:id="@+id/textViewNombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="26dp"
+                android:text="@string/textViewNombreString"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageViewFotoPerfil" />
+
+            <TextView
+                android:id="@+id/textViewApellido"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/textViewApellidoString"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewNombre"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNombre" />
+
+            <TextView
+                android:id="@+id/textViewCorreo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/textViewCorreoString"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewApellido"
+                app:layout_constraintTop_toBottomOf="@+id/textViewApellido" />
+
+            <EditText
+                android:id="@+id/textViewNombreEscribir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:ems="10"
+                android:hint="@string/textViewNombreEscribirString"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewNombre"
+                app:layout_constraintStart_toEndOf="@+id/textViewNombre"
+                app:layout_constraintTop_toTopOf="@+id/textViewNombre" />
+
+            <EditText
+                android:id="@+id/textViewApellidoEscribir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="31dp"
+                android:ems="10"
+                android:hint="@string/textViewApellidoEscribirString"
+                android:inputType="text"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewApellido"
+                app:layout_constraintStart_toEndOf="@+id/textViewApellido"
+                app:layout_constraintTop_toTopOf="@+id/textViewApellido" />
+
+            <EditText
+                android:id="@+id/textViewCorreoEscribir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="43dp"
+                android:ems="10"
+                android:hint="@string/textViewCorreoEscribirString"
+                android:inputType="textEmailAddress"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewCorreo"
+                app:layout_constraintStart_toEndOf="@+id/textViewCorreo"
+                app:layout_constraintTop_toTopOf="@+id/textViewCorreo" />
+
+            <TextView
+                android:id="@+id/textViewGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="48dp"
+                android:text="@string/textViewGeneroString"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewCorreo"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCorreo" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupGenero"
+                android:layout_width="150sp"
+                android:layout_height="150sp"
+                android:layout_marginStart="56dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewGenero"
+                app:layout_constraintTop_toTopOf="@+id/textViewGenero">
+
+                <RadioButton
+                    android:id="@+id/radioGroupButtonGeneroMasculino"
+                    android:layout_width="150dp"
+                    android:layout_height="50sp"
+                    android:text="@string/radioGroupButtonGeneroMasculinoString" />
+
+                <RadioButton
+                    android:id="@+id/radioGroupButtonGeneroFemenino"
+                    android:layout_width="150dp"
+                    android:layout_height="50sp"
+                    android:text="@string/radioGroupButtonGeneroFemeninoString" />
+
+                <RadioButton
+                    android:id="@+id/radioGroupButtonGeneroOtro"
+                    android:layout_width="150dp"
+                    android:layout_height="50sp"
+                    android:text="@string/radioGroupButtonGeneroOtroString" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textViewPaisDeOrigen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/textViewPaisDeOrigenString"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewGenero"
+                app:layout_constraintTop_toBottomOf="@+id/radioGroupGenero" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="125sp"
+                android:layout_height="48dp"
+                android:layout_marginStart="32dp"
+                app:layout_constraintStart_toEndOf="@+id/textViewPaisDeOrigen"
+                app:layout_constraintTop_toTopOf="@+id/textViewPaisDeOrigen" />
+
+            <TextView
+                android:id="@+id/textViewIntereses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/textViewInteresesString"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/textViewPaisDeOrigen"
+                app:layout_constraintTop_toBottomOf="@+id/textViewPaisDeOrigen" />
+
+            <CheckBox
+                android:id="@+id/checkBoxLectura"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/checkBoxLecturaString"
+                app:layout_constraintStart_toStartOf="@+id/textViewIntereses"
+                app:layout_constraintTop_toBottomOf="@+id/textViewIntereses" />
+
+            <CheckBox
+                android:id="@+id/checkBoxDeporte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkBoxDeporteDeporteString"
+                app:layout_constraintEnd_toEndOf="@+id/spinner"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/checkBoxLectura"
+                app:layout_constraintTop_toTopOf="@+id/checkBoxLectura" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMusica"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:text="@string/checkBoxMusicaString"
+                app:layout_constraintStart_toEndOf="@+id/checkBoxDeporte"
+                app:layout_constraintTop_toTopOf="@+id/checkBoxDeporte" />
+
+            <CheckBox
+                android:id="@+id/checkBoxArte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/checkBoxArteString"
+                app:layout_constraintStart_toEndOf="@+id/checkBoxMusica"
+                app:layout_constraintTop_toTopOf="@+id/checkBoxMusica" />
+
+            <TextView
+                android:id="@+id/textViewSeekBarTexto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/textViewSeekBarTextoString"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/checkBoxLectura"
+                app:layout_constraintTop_toBottomOf="@+id/checkBoxLectura" />
+
+            <SeekBar
+                android:id="@+id/seekBarNivelDeSatisfaccion"
+                android:layout_width="300dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="@+id/textViewSeekBarTexto"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSeekBarTexto" />
+
+            <TextView
+                android:id="@+id/textViewSeekBarMinimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewSeekBarMinimoString"
+                app:layout_constraintStart_toStartOf="@+id/seekBarNivelDeSatisfaccion"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarNivelDeSatisfaccion" />
+
+            <TextView
+                android:id="@+id/textViewSeekBarMaximo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewSeekBarMaximoString"
+                app:layout_constraintEnd_toEndOf="@+id/seekBarNivelDeSatisfaccion"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarNivelDeSatisfaccion" />
+
+            <TextView
+                android:id="@+id/textViewSeekBarPuntuacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/textViewSeekBarPuntuacionString"
+                app:layout_constraintEnd_toEndOf="@+id/seekBarNivelDeSatisfaccion"
+                app:layout_constraintStart_toStartOf="@+id/seekBarNivelDeSatisfaccion"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarNivelDeSatisfaccion" />
+
+            <Switch
+                android:id="@+id/switch1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/textViewSwitchTexto"
+                app:layout_constraintStart_toEndOf="@+id/textViewSwitchTexto"
+                app:layout_constraintTop_toTopOf="@+id/textViewSwitchTexto" />
+
+            <TextView
+                android:id="@+id/textViewSwitchTexto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                android:text="@string/textViewSwitchTextoString"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/seekBarNivelDeSatisfaccion"
+                app:layout_constraintTop_toBottomOf="@+id/seekBarNivelDeSatisfaccion" />
+
+            <Button
+                android:id="@+id/buttonGuardar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/buttonGuardarString"
+                app:layout_constraintStart_toStartOf="@+id/textViewSwitchTexto"
+                app:layout_constraintTop_toBottomOf="@+id/textViewSwitchTexto" />
+
+            <TextView
+                android:id="@+id/textViewResumen"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_marginTop="8dp"
+                android:hint="@string/textViewResumenString"
+                app:layout_constraintStart_toStartOf="@+id/buttonGuardar"
+                app:layout_constraintTop_toBottomOf="@+id/buttonGuardar" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

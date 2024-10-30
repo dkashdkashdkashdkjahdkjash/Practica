@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Practica 3</string>
+    <string name="textViewTituloString">Mi Perfil Personal</string>
+    <string name="textViewNombreString">Nombre:</string>
+    <string name="textViewApellidoString">Apellido:</string>
+    <string name="textViewCorreoString">Correo:</string>
+    <string name="textViewNombreEscribirString">Nombre</string>
+    <string name="textViewApellidoEscribirString">Apellido</string>
+    <string name="textViewCorreoEscribirString">Correo</string>
+    <string name="textViewGeneroString">Género:</string>
+    <string name="radioGroupButtonGeneroMasculinoString">Masculino</string>
+    <string name="radioGroupButtonGeneroFemeninoString">Femenino</string>
+    <string name="radioGroupButtonGeneroOtroString">Otro</string>
+    <string name="textViewPaisDeOrigenString">País de origen</string>
+    <string name="textViewInteresesString">Intereses:</string>
+    <string name="checkBoxLecturaString">Lectura</string>
+    <string name="checkBoxDeporteDeporteString">Deporte</string>
+    <string name="checkBoxMusicaString">Musica</string>
+    <string name="checkBoxArteString">Arte</string>
+    <string name="textViewSeekBarTextoString">Nivel de satisfacción</string>
+    <string name="textViewSeekBarMinimoString">1</string>
+    <string name="textViewSeekBarMaximoString">10</string>
+    <string name="textViewSeekBarPuntuacionString">Puntuación actual:</string>
+    <string name="textViewSwitchTextoString">Suscripción al Boletín:</string>
+    <string name="buttonGuardarString">Guardar</string>
+    <string name="textViewResumenString">Resumen</string>
+
+    <string-array name="paises_array">
+        <item>Pais 1</item>
+        <item>Pais 2</item>
+        <item>Pais 3</item>
+        <item>Pais 4</item>
+        <item>Pais 5</item>
+        <item>Pais 6</item>
+        <item>Pais 7</item>
+        <item>Pais 8</item>
+        <item>Pais 9</item>
+    </string-array>
+</resources>
