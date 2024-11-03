@@ -24,16 +24,13 @@
     <string name="textViewSwitchTextoString">Suscripción al Boletín:</string>
     <string name="buttonGuardarString">Guardar</string>
     <string name="textViewResumenString">Resumen</string>
+    <string name="lectura">[Lectura]</string>
+    <string name="deporte">[Deporte]</string>
+    <string name="musica">[Musica]</string>
+    <string name="arte">[Arte]</string>
 
     <string-array name="paises_array">
-        <item>Pais 1</item>
-        <item>Pais 2</item>
-        <item>Pais 3</item>
-        <item>Pais 4</item>
-        <item>Pais 5</item>
-        <item>Pais 6</item>
-        <item>Pais 7</item>
-        <item>Pais 8</item>
-        <item>Pais 9</item>
+        <item>España</item>
+        <item>China</item>
     </string-array>
 </resources>

@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.RadioButton
@@ -35,22 +36,16 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
 
         imagenFotoPerfilVacia.setImageResource(R.mipmap.foto_de_perfil_vacia)
 
-        val textViewTitulo = findViewById<TextView>(R.id.TextViewTitulo)
-        val textViewNombre = findViewById<TextView>(R.id.textViewNombre)
-        val textViewApellido = findViewById<TextView>(R.id.textViewApellido)
-        val textViewCorreo = findViewById<TextView>(R.id.textViewCorreo)
-        var editTextNombre = findViewById<TextView>(R.id.textViewNombreEscribir)
-        var editTextApellido = findViewById<TextView>(R.id.textViewApellido)
-        var editTextCorreo = findViewById<TextView>(R.id.textViewCorreo)
-        val textViewGenero = findViewById<TextView>(R.id.textViewGenero)
-        var radioGroup = findViewById<RadioGroup>(R.id.radioGroupGenero)
+        val editTextNombre = findViewById<TextView>(R.id.textViewNombreEscribir)
+        val editTextApellido = findViewById<TextView>(R.id.textViewApellido)
+        val editTextCorreo = findViewById<TextView>(R.id.textViewCorreo)
+        val radioGroup = findViewById<RadioGroup>(R.id.radioGroupGenero)
 
         radioGroup.setOnCheckedChangeListener{_, selectedRadioButtonId ->
             val radioButtonSeleccionado = findViewById<RadioButton>(selectedRadioButtonId)
             radioButtonElegido = radioButtonSeleccionado.text.toString()
         }
 
-        val textViewPais = findViewById<TextView>(R.id.textViewPaisDeOrigen)
         spinner = findViewById<Spinner>(R.id.spinner)
 
         ArrayAdapter.createFromResource(
@@ -63,45 +58,88 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemSelectedListener {
         }
         spinner.onItemSelectedListener = this
 
-        val textViewIntereses = findViewById<TextView>(R.id.textViewIntereses)
+        val interesLectura = findViewById<CheckBox>(R.id.checkBoxLectura)
+        val interesDeporte = findViewById<CheckBox>(R.id.checkBoxDeporte)
+        val interesMusica = findViewById<CheckBox>(R.id.checkBoxMusica)
+        val interesArte = findViewById<CheckBox>(R.id.checkBoxArte)
 
+        var lectura = ""
+        interesLectura.setOnClickListener(){
+            if(lectura == ""){
+                lectura = getString(R.string.lectura)
+            }else if (lectura != ""){
+                lectura = ""
+            }
+        }
+        var deporte = ""
+        interesDeporte.setOnClickListener(){
+            if(deporte == ""){
+                deporte = getString(R.string.deporte)
+            }else if (deporte != ""){
+                deporte = ""
+            }
+        }
+        var musica = ""
+        interesMusica.setOnClickListener(){
+            if(musica == ""){
+                musica = getString(R.string.musica)
+            }else if (musica != ""){
+                musica = ""
+            }
+        }
+        var arte = ""
+        interesArte.setOnClickListener(){
+            if(arte == ""){
+                arte = getString(R.string.arte)
+            }else if (arte != ""){
+                arte = ""
+            }
+        }
 
         val seekBar = findViewById<SeekBar>(R.id.seekBarNivelDeSatisfaccion)
-        val textViewSeekBarMinimo = findViewById<TextView>(R.id.textViewSeekBarMinimo)
-        val textViewSeekBarMaximo = findViewById<TextView>(R.id.textViewSeekBarMaximo)
         val textViewSeekBarPuntuacion = findViewById<TextView>(R.id.textViewSeekBarPuntuacion)
         seekBar.min = 1
         seekBar.max = 10
 
+        var seekBarPuntuacion = 0
         seekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
+                seekBarPuntuacion = p1
                 textViewSeekBarPuntuacion.text = "Valor seleccionado: $p1"
             }
 
             override fun onStartTrackingTouch(p0: SeekBar?) {
-                TODO("Not yet implemented")
+
             }
 
             override fun onStopTrackingTouch(p0: SeekBar?) {
-                TODO("Not yet implemented")
+
             }
         })
 
-        val textViewSwitchTexto = findViewById<TextView>(R.id.textViewSwitchTexto)
         val switch1 = findViewById<Switch>(R.id.switch1)
 
+        var subscipcion = "No"
+        switch1.setOnClickListener(){
+            if (subscipcion == "No"){
+                subscipcion = "Si"
+            }else if(subscipcion == "Si"){
+                subscipcion = "No"
+            }
+
+        }
 
         val buttonGuardar = findViewById<Button>(R.id.buttonGuardar)
-        var textViewResumen = findViewById<TextView>(R.id.textViewResumen)
+        val textViewResumen = findViewById<TextView>(R.id.textViewResumen)
         buttonGuardar.setOnClickListener{
             textViewResumen.text = "Nombre: ${editTextNombre.text.toString()} \n" +
                     "Apellido: ${editTextApellido.text.toString()} \n" +
                     "Correo: ${editTextCorreo.text.toString()} \n" +
                     "Género: $radioButtonElegido \n" +
                     "Pais de origen: ${spinnerSeleccionado.toString()} \n" +
-                    "Intereses \n" +
-                    "Nivel de satisfaccion: ${textViewSeekBarPuntuacion.text.toString()} \n" +
-                    "Subscripcion al boletin"
+                    "Intereses $lectura $deporte $musica $arte\n" +
+                    "Nivel de satisfaccion: $seekBarPuntuacion \n" +
+                    "Subscripcion al boletin: $subscipcion"
         }
     }
 

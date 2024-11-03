@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">练习三</string>
+    <string name="textViewTituloString">我的个人资料</string>
+    <string name="textViewNombreString">姓名：</string>
+    <string name="textViewApellidoString">姓：</string>
+    <string name="textViewCorreoString">邮件：</string>
+    <string name="textViewNombreEscribirString">姓名</string>
+    <string name="textViewApellidoEscribirString">姓</string>
+    <string name="textViewCorreoEscribirString">邮件</string>
+    <string name="textViewGeneroString">性别：</string>
+    <string name="radioGroupButtonGeneroMasculinoString">男性</string>
+    <string name="radioGroupButtonGeneroFemeninoString">女性</string>
+    <string name="radioGroupButtonGeneroOtroString">其他</string>
+    <string name="textViewPaisDeOrigenString">原产地</string>
+    <string name="textViewInteresesString">兴趣：</string>
+    <string name="checkBoxLecturaString">阅读</string>
+    <string name="checkBoxDeporteDeporteString">运动</string>
+    <string name="checkBoxMusicaString">音乐</string>
+    <string name="checkBoxArteString">艺术</string>
+    <string name="textViewSeekBarTextoString">满意度</string>
+    <string name="textViewSeekBarMinimoString">一</string>
+    <string name="textViewSeekBarMaximoString">十</string>
+    <string name="textViewSeekBarPuntuacionString">目前成绩：</string>
+    <string name="textViewSwitchTextoString">订阅时事通讯：</string>
+    <string name="buttonGuardarString">保持</string>
+    <string name="textViewResumenString">概括</string>
+    <string name="lectura">[阅读]</string>
+    <string name="deporte">[运动]</string>
+    <string name="musica">[音乐]</string>
+    <string name="arte">[艺术]</string>
+
+    <string-array name="paises_array">
+        <item>西班牙</item>
+        <item>中国</item>
+    </string-array>
+</resources>
